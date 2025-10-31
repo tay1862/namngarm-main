@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "articles": "Articles",
+    "tags": "Tags",
+    "contact": "Contact"
+  },
+  "common": {
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "filter": "Filter"
+  },
+  "product": {
+    "price": "Price",
+    "category": "Category",
+    "contactUs": "Contact Us",
+    "details": "Product Details",
+    "featured": "Featured Products",
+    "latest": "Latest Products",
+    "allProducts": "All Products"
+  },
+  "article": {
+    "latest": "Latest Articles",
+    "featured": "Featured Articles",
+    "readMore": "Read More",
+    "publishedOn": "Published on",
+    "allArticles": "All Articles"
+  },
+  "contact": {
+    "getInTouch": "Get In Touch",
+    "whatsapp": "WhatsApp",
+    "facebook": "Facebook",
+    "line": "LINE",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "home": {
+    "welcome": "Welcome to",
+    "hero": {
+      "title": "NAMNGAM ORIGINAL",
+      "subtitle": "True Quality and Beauty"
+    }
+  },
+  "footer": {
+    "allRightsReserved": "All Rights Reserved"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to common questions about our products and services",
+    "hero": {
+      "title": "How Can We Help You?",
+      "description": "Browse through our comprehensive FAQ section to find answers to your questions."
+    },
+    "search": {
+      "placeholder": "Search for questions..."
+    },
+    "categories": {
+      "all": "All Categories"
+    },
+    "noResults": "No questions found matching your search.",
+    "noFaqs": "No FAQs available at the moment."
+  }
+}

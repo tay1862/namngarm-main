@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "ໜ້າຫຼັກ",
+    "about": "ກ່ຽວກັບ",
+    "products": "ສິນຄ້າ",
+    "articles": "ບົດຄວາມ",
+    "tags": "ເປົ້າໝາຍ",
+    "contact": "ຕິດຕໍ່"
+  },
+  "common": {
+    "readMore": "ອ່ານເພີ່ມເຕີມ",
+    "viewAll": "ເບິ່ງທັງຫມົດ",
+    "loading": "ກຳລັງໂຫຼດ...",
+    "error": "ເກີດຂໍ້ຜິດພາດ",
+    "save": "ບັນທຶກ",
+    "cancel": "ຍົກເລີກ",
+    "delete": "ລຶບ",
+    "edit": "ແກ້ໄຂ",
+    "search": "ຄົ້ນຫາ",
+    "filter": "ກັ່ນຕອງ"
+  },
+  "product": {
+    "price": "ລາຄາ",
+    "category": "ໝວດໝູ່",
+    "contactUs": "ຕິດຕໍ່ສອບຖາມ",
+    "details": "ລາຍລະອຽດສິນຄ້າ",
+    "featured": "ສິນຄ້າແນະນຳ",
+    "latest": "ສິນຄ້າຫຼ້າສຸດ",
+    "allProducts": "ສິນຄ້າທັງໝົດ"
+  },
+  "article": {
+    "latest": "ບົດຄວາມຫຼ້າສຸດ",
+    "featured": "ບົດຄວາມແນະນຳ",
+    "readMore": "ອ່ານຕໍ່",
+    "publishedOn": "ເຜີຍແຜ່ເມື່ອ",
+    "allArticles": "ບົດຄວາມທັງໝົດ"
+  },
+  "contact": {
+    "getInTouch": "ຕິດຕໍ່ພວກເຮົາ",
+    "whatsapp": "WhatsApp",
+    "facebook": "Facebook",
+    "line": "LINE",
+    "phone": "ໂທລະສັບ",
+    "email": "ອີເມລ"
+  },
+  "home": {
+    "welcome": "ຍິນດີຕ້ອນຮັບສູ່",
+    "hero": {
+      "title": "NAMNGAM ORIGINAL",
+      "subtitle": "ຄຸນນະພາບ ແລະ ຄວາມງາມທີ່ແທ້ຈິງ"
+    }
+  },
+  "footer": {
+    "allRightsReserved": "ສງວນລິຂສິທຘິ"
+  },
+  "faq": {
+    "title": "ຄຳຖາມທີ່ພົບບ່ອຍ",
+    "description": "ຄົ້ນຫາຄຳຕອບສຳຫຼັບຄຳຖາມທົ່ວໄປເກີຍກັບຜະລິດພັນຑ໌ແລະບິການຂອງເຮົາ",
+    "hero": {
+      "title": "ເຮົາສາມາດຊ່ວຍທ່ານອຍ່າງໃດ?",
+      "description": "ຄົ້ນຫາຄຳຕອບໃນສ່ວນຄຳຖາມທີ່ພົບບ່ອຍຂອງເຮົາ"
+    },
+    "search": {
+      "placeholder": "ຄົ້ນຫາຄຳຖາມ..."
+    },
+    "categories": {
+      "all": "ໝວດໝົນທັ່ງໝົນມດ"
+    },
+    "noResults": "ບໍ່ພົບຄຳຖາມທີ່ຕົງກັບການຄົ້ນຫາຂອງທ່ານ",
+    "noFaqs": "ບໍ່ມີຄຳຖາມທີ່ພົບບ່ອຍໃນຂະນະນີ້"
+  }
+}
