@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { MessageCircle, X, Phone } from 'lucide-react';
+import { MessageCircle, X } from 'lucide-react';
+import { FaWhatsapp, FaFacebook, FaLine, FaPhone, FaEnvelope } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSettings } from '@/hooks/useSettings';
 
@@ -9,7 +10,14 @@ export default function QuickLinks() {
   const [isOpen, setIsOpen] = useState(false);
   const { settings } = useSettings();
 
-  // Build quick links from settings
+  // Icon Components with SVG from react-icons
+  const WhatsAppIcon = () => <FaWhatsapp size={20} />;
+  const FacebookIcon = () => <FaFacebook size={20} />;
+  const LineIcon = () => <FaLine size={20} />;
+  const PhoneIcon = () => <FaPhone size={20} />;
+  const EmailIcon = () => <FaEnvelope size={20} />;
+
+  // Build quick links from settings (keeping original logic)
   const quickLinks = [
     ...(settings?.whatsapp ? [{
       id: 1,
@@ -17,7 +25,7 @@ export default function QuickLinks() {
       label: 'WhatsApp',
       url: `https://wa.me/${settings.whatsapp.replace(/[^\d]/g, '')}`,
       color: '#25D366',
-      icon: '💬',
+      icon: <WhatsAppIcon />,
     }] : []),
     ...(settings?.facebookPage ? [{
       id: 2,
@@ -25,7 +33,7 @@ export default function QuickLinks() {
       label: 'Facebook',
       url: settings.facebookPage,
       color: '#1877F2',
-      icon: '📘',
+      icon: <FacebookIcon />,
     }] : []),
     ...(settings?.lineId ? [{
       id: 3,
@@ -33,7 +41,23 @@ export default function QuickLinks() {
       label: 'LINE',
       url: `https://line.me/ti/p/~${settings.lineId}`,
       color: '#00B900',
-      icon: '💚',
+      icon: <LineIcon />,
+    }] : []),
+    ...(settings?.phone ? [{
+      id: 4,
+      type: 'phone' as const,
+      label: 'Phone',
+      url: `tel:${settings.phone}`,
+      color: '#4267B2',
+      icon: <PhoneIcon />,
+    }] : []),
+    ...(settings?.email ? [{
+      id: 5,
+      type: 'email' as const,
+      label: 'Email',
+      url: `mailto:${settings.email}`,
+      color: '#EA4335',
+      icon: <EmailIcon />,
     }] : []),
   ];
 
@@ -61,10 +85,10 @@ export default function QuickLinks() {
                 className="group flex items-center gap-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
                 <div
-                  className="w-12 h-12 flex items-center justify-center text-white font-bold flex-shrink-0"
+                  className="w-12 h-12 flex items-center justify-center text-white flex-shrink-0"
                   style={{ backgroundColor: link.color }}
                 >
-                  <span className="text-xl">{link.icon}</span>
+                  {link.icon}
                 </div>
                 <span className="pr-4 font-medium text-gray-700 group-hover:text-pink-500 transition-colors">
                   {link.label}

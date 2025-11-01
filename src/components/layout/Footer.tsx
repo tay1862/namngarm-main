@@ -145,15 +145,6 @@ export default function Footer() {
                 </a>
               )}
               
-              {settings?.lineId && (
-                <a
-                  href={`https://line.me/ti/p/~${settings.lineId}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-gradient-to-br hover:from-green-400 hover:to-green-500 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-500/30 backdrop-blur-sm border border-gray-700/50"
-                >
-                </a>
-              )}
             </div>
           </div>
         </div>
