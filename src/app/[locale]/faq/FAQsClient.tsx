@@ -3,7 +3,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
 
 interface FAQ {
   id: string;
@@ -124,22 +123,28 @@ export default function FAQsClient() {
 
           {/* Categories */}
           <div className="flex flex-wrap gap-3">
-            <Button
-              variant={selectedCategory === 'all' ? 'primary' : 'outline'}
-              size="sm"
+            <button
+              className={`px-6 py-3 rounded-2xl font-medium transition-all duration-300 inline-flex items-center gap-3 justify-center text-sm lg:text-base ${
+                selectedCategory === 'all'
+                  ? 'bg-pink-500 text-white hover:bg-pink-550 hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-pink-500/25'
+                  : 'bg-white text-pink-500 border-2 border-pink-200 hover:bg-pink-50 hover:border-pink-300'
+              }`}
               onClick={() => setSelectedCategory('all')}
             >
               {t('categories.all')}
-            </Button>
+            </button>
             {categories.map((category) => (
-              <Button
+              <button
                 key={category.id}
-                variant={selectedCategory === category.id ? 'primary' : 'outline'}
-                size="sm"
+                className={`px-6 py-3 rounded-2xl font-medium transition-all duration-300 inline-flex items-center gap-3 justify-center text-sm lg:text-base ${
+                  selectedCategory === category.id
+                    ? 'bg-pink-500 text-white hover:bg-pink-550 hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-pink-500/25'
+                    : 'bg-white text-pink-500 border-2 border-pink-200 hover:bg-pink-50 hover:border-pink-300'
+                }`}
                 onClick={() => setSelectedCategory(category.id)}
               >
                 {getLocalizedText(category, 'name')} ({category._count.faqs})
-              </Button>
+              </button>
             ))}
           </div>
         </div>
@@ -158,11 +163,12 @@ export default function FAQsClient() {
         ) : (
           <div className="space-y-4">
             {filteredFaqs.map((faq) => (
-              <Card 
-                key={faq.id} 
+              <div
+                key={faq.id}
                 className="hover:shadow-xl transition-all duration-300 cursor-pointer"
                 onClick={() => toggleExpanded(faq.id)}
               >
+                <Card className="hover:shadow-xl transition-all duration-300">
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-between">
                     <CardTitle className="text-lg font-medium text-neutral-800 pr-4">
@@ -204,7 +210,8 @@ export default function FAQsClient() {
                     </div>
                   </CardContent>
                 )}
-              </Card>
+                </Card>
+              </div>
             ))}
           </div>
         )}

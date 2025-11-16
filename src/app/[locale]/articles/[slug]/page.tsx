@@ -5,7 +5,6 @@ import { useParams, useRouter } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
-import Head from 'next/head';
 import {
   Calendar,
   User,
@@ -18,6 +17,7 @@ import {
 import { motion } from 'framer-motion';
 import ArticlesList from '@/components/articles/ArticlesList';
 import { ArticleStructuredData, BreadcrumbStructuredData } from '@/components/seo/StructuredData';
+import { Metadata } from 'next';
 
 interface Article {
   id: string;
@@ -131,13 +131,13 @@ export default function ArticlePage() {
           <div className="container-custom py-12">
             <div className="max-w-4xl mx-auto">
               <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-              <div className="h-4 bg-gray-200 rounded mb-2"></div>
               <div className="h-4 bg-gray-200 rounded mb-2 w-5/6"></div>
-              <div className="h-4 bg-gray-200 rounded mb-8 w-4/6"></div>
+              <div className="h-4 bg-gray-200 rounded mb-2 w-4/6"></div>
               <div className="space-y-4">
                 <div className="h-4 bg-gray-200 rounded"></div>
-                <div className="h-4 bg-gray-200 rounded"></div>
                 <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+                <div className="h-4 bg-gray-200 rounded"></div>
+                <div className="h-4 bg-gray-200 rounded w-4/6"></div>
               </div>
             </div>
           </div>
@@ -175,25 +175,7 @@ export default function ArticlePage() {
   ];
 
   return (
-    <>
-      <Head>
-        <title>{articleTitle} | NAMNGAM</title>
-        <meta name="description" content={articleExcerpt} />
-        <meta property="og:title" content={articleTitle} />
-        <meta property="og:description" content={articleExcerpt} />
-        <meta property="og:image" content={article.featuredImage || '/Logo-namngam-white.svg'} />
-        <meta property="og:url" content={`${process.env.NEXTAUTH_URL}/${locale}/articles/${params.slug}`} />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={articleTitle} />
-        <meta name="twitter:description" content={articleExcerpt} />
-        <meta name="twitter:image" content={article.featuredImage || '/Logo-namngam-white.svg'} />
-        
-        {/* Structured Data */}
-        <ArticleStructuredData article={article} locale={locale} />
-        <BreadcrumbStructuredData breadcrumbs={breadcrumbs} locale={locale} />
-      </Head>
-      <div className="min-h-screen">
+    <div className="min-h-screen">
       {/* Header Image */}
       {article.featuredImage ? (
         <div className="relative h-96 overflow-hidden">
@@ -356,7 +338,11 @@ export default function ArticlePage() {
           <ArticlesList limit={3} />
         </div>
       </section>
-      </div>
-    </>
+    </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Article | NAMNGAM',
+  description: 'Read our latest articles and updates',
+};

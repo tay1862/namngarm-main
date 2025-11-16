@@ -135,18 +135,18 @@ export default function FAQSection({ locale }: FAQSectionProps) {
           <p className="text-neutral-600 mb-6">
             {tFaq('stillHaveQuestions')}
           </p>
-          <a
-            href={`/${locale}/contact`}
+          <button
+            onClick={() => window.location.href = `/${locale}/contact`}
             className="inline-flex items-center justify-center gap-3 rounded-2xl font-medium transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed antialiased bg-pink-500 text-white hover:bg-pink-550 hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-pink-500/25 px-10 py-5 text-lg"
           >
             {tContact('getInTouch')}
-          </a>
-          <a
-            href={`/${locale}/faq`}
+          </button>
+          <button
+            onClick={() => window.location.href = `/${locale}/faq`}
             className="inline-flex items-center justify-center gap-3 rounded-2xl font-medium transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed antialiased bg-white text-pink-500 border-2 border-pink-200 hover:bg-pink-50 hover:border-pink-300 px-10 py-5 text-lg ml-4"
           >
             {tFaq('viewAll')}
-          </a>
+          </button>
         </div>
       </div>
     </section>

@@ -4,7 +4,6 @@ import { useTranslations } from 'next-intl';
 import { getLocalizedField } from '@/lib/i18n-helpers';
 import { Locale } from '@/i18n';
 import Image from 'next/image';
-import Head from 'next/head';
 import { ProductStructuredData } from '@/components/seo/StructuredData';
 
 interface ProductsListProps {
@@ -26,25 +25,23 @@ export default function ProductsList({ products, locale }: ProductsListProps) {
 
   return (
     <>
-      <Head>
-        {products.map((product: any) => {
-          const name = getLocalizedField(product, 'name', locale as Locale);
-          const description = getLocalizedField(product, 'description', locale as Locale) ||
-                           getLocalizedField(product, 'excerpt', locale as Locale);
-          
-          return (
-            <ProductStructuredData
-              key={`structured-${product.id}`}
-              product={{
-                ...product,
-                name,
-                description,
-              }}
-              locale={locale}
-            />
-          );
-        })}
-      </Head>
+      {products.map((product: any) => {
+        const name = getLocalizedField(product, 'name', locale as Locale);
+        const description = getLocalizedField(product, 'description', locale as Locale) ||
+                         getLocalizedField(product, 'excerpt', locale as Locale);
+        
+        return (
+          <ProductStructuredData
+            key={`structured-${product.id}`}
+            product={{
+              ...product,
+              name,
+              description,
+            }}
+            locale={locale}
+          />
+        );
+      })}
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((product: any) => {
           const name = getLocalizedField(product, 'name', locale as Locale);

@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { Input } from '@/components/ui/Input';
-import { Button } from '@/components/ui/Button';
 import toast from 'react-hot-toast';
 import { LogIn, X } from 'lucide-react';
 
@@ -94,9 +93,9 @@ export default function AdminLoginModal({ isOpen, onClose }: AdminLoginModalProp
               required
             />
 
-            <Button
+            <button
               type="submit"
-              className="w-full"
+              className="w-full px-8 py-4 rounded-2xl font-medium transition-all duration-300 inline-flex items-center gap-3 justify-center text-sm lg:text-base bg-pink-500 text-white hover:bg-pink-550 hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-pink-500/25 disabled:opacity-50 disabled:cursor-not-allowed antialiased"
               disabled={isLoading}
             >
               {isLoading ? (
@@ -110,7 +109,7 @@ export default function AdminLoginModal({ isOpen, onClose }: AdminLoginModalProp
                   Sign In
                 </>
               )}
-            </Button>
+            </button>
           </form>
         </div>
       </div>
