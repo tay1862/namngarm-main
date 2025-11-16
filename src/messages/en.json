@@ -72,7 +72,8 @@
   },
   "footer": {
     "allRightsReserved": "All Rights Reserved",
-    "socialMedia": "Social Media"
+    "socialMedia": "Social Media",
+    "whatsappTooltip": "Click to open WhatsApp"
   },
   "faq": {
     "title": "Frequently Asked Questions",

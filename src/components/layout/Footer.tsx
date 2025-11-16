@@ -169,13 +169,22 @@ export default function Footer() {
               
               {settings?.whatsapp && (
                 <a
-                  href={`https://wa.me/${settings.whatsapp.replace(/[^\d]/g, '')}`}
+                  href={`https://wa.me/${settings.whatsapp.replace(/[^\d]/g, '')}${
+                    settings[`whatsappMessage_${locale}` as keyof typeof settings]
+                      ? `?text=${encodeURIComponent(settings[`whatsappMessage_${locale}` as keyof typeof settings] as string)}`
+                      : ''
+                  }`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-gradient-to-br hover:from-green-500 hover:to-green-600 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-500/30 backdrop-blur-sm border border-gray-700/50"
+                  className="relative w-10 h-10 rounded-full bg-gray-800/50 hover:bg-gradient-to-br hover:from-green-500 hover:to-green-600 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-500/30 backdrop-blur-sm border border-gray-700/50 group"
                   aria-label="WhatsApp"
+                  title={tFooter('whatsappTooltip') || "Click to open WhatsApp"}
                 >
                   <WhatsAppIcon className="w-5 h-5 text-gray-400 hover:text-white transition-colors" />
+                  {/* Tooltip for mobile and desktop */}
+                  <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+                    {tFooter('whatsappTooltip') || "Click to open WhatsApp"}
+                  </span>
                 </a>
               )}
               

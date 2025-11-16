@@ -75,7 +75,8 @@
   },
   "footer": {
     "allRightsReserved": "สงวนลิขสิทธิ์",
-    "socialMedia": "โซเชียลมีเดีย"
+    "socialMedia": "โซเชียลมีเดีย",
+    "whatsappTooltip": "คลิกเพื่อเปิด WhatsApp"
   },
   "faq": {
     "title": "คำถามที่พบบ่อย",
