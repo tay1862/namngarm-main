@@ -11,8 +11,7 @@ import { addCacheBusting } from '@/lib/performance';
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="#25D366">
-      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.73.35 3.41.95 4.85 1.72l.35 2.45-2.46 4.46c-.93.58-2.04 1.16-3.27 1.16-1.63 0-3.09-.95-4.17-2.42l1.66-1.51c1.3-1.18 2.78-2.46 3.54-3.82.76-1.86.75-3.8.75-3.8 0-2.76-2.24-5-5-5 0-4.55 3.69-8.29 8.29-8.29 0 1.85.15 3.51.48 5.03.48 1.64 0 3.09-.95 4.17-2.42l-1.66 1.51c-1.3 1.18-2.78 2.46-3.54 3.82-.76 1.86-.75 3.8-.75 3.8 0 2.76 2.24 5 5 5 0 4.55-3.69 8.29-8.29 8.29 0-1.85-.15-3.51-.48-5.03-.48-1.64 0-3.09.95-4.17 2.42l1.66-1.51c1.3-1.18 2.78-2.46 3.54-3.82.76-1.86.75-3.8.75-3.8z"/>
-      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.87c0 2.76.22 5.44.63 7.95l-.35 2.45 2.46 4.46c.93.58 2.04 1.16 3.27 1.16 1.63 0 3.09-.95 4.17-2.42l-1.66-1.51c-1.3-1.18-2.78-2.46-3.54-3.82-.76-1.86-.75-3.8-.75-3.8 0-2.76-2.24-5-5-5 0-4.55 3.69-8.29 8.29-8.29 0-1.85-.15-3.51-.48-5.03-.48-1.64 0-3.09.95-4.17 2.42l1.66 1.51c1.3 1.18 2.78 2.46 3.54 3.82.76 1.86.75 3.8.75 3.8z"/>
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
     </svg>
   );
 }
@@ -30,7 +29,7 @@ function LineIcon({ className }: { className?: string }) {
 function PhoneIcon({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07-8.67-2.07a2 2 0 0 1-2.18 2 4.11 4.11 0 0 1 2.81.7 2.81.7 0 0 1 1.189.149 1.425.064.614.137 1.189.149 1.425.064.614.137 1.189.149 1.425.064.236.085.411.274.611.629.611.629 0 0 1 .17-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771z"/>
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
     </svg>
   );
 }
@@ -162,6 +161,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-gradient-to-br hover:from-pink-500 hover:to-rose-500 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-pink-500/30 backdrop-blur-sm border border-gray-700/50"
+                  aria-label="Facebook"
                 >
                   <Facebook size={20} className="text-gray-400 hover:text-white transition-colors" />
                 </a>
@@ -173,6 +173,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-gradient-to-br hover:from-green-500 hover:to-green-600 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-500/30 backdrop-blur-sm border border-gray-700/50"
+                  aria-label="WhatsApp"
                 >
                   <WhatsAppIcon className="w-5 h-5 text-gray-400 hover:text-white transition-colors" />
                 </a>
@@ -184,6 +185,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-gradient-to-br hover:from-green-400 hover:to-green-500 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-400/30 backdrop-blur-sm border border-gray-700/50"
+                  aria-label="LINE"
                 >
                   <LineIcon className="w-5 h-5 text-gray-400 hover:text-white transition-colors" />
                 </a>
